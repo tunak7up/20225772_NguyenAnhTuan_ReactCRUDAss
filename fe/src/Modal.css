@@ -1,0 +1,41 @@
+/* src/Modal.css */
+
+/* Lớp phủ (giống code của bạn) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Nội dung Modal (giống code của bạn, thêm 1 số chi tiết) */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px; /* Tăng chiều rộng 1 chút */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* Để chứa nút đóng */
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+/* Nút đóng modal (X) */
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
