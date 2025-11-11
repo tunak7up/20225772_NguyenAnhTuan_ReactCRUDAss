@@ -1,17 +1,16 @@
 /* src/App.css */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 20px;
-  color: black;
-  /* left: 50%; */
-  transform: translateX(50%);
-  width: 100%;
-}
+
+/* KHÔNG còn 'body' styles ở đây nữa */
 
 .App {
+  /* 1. KHÔNG DÙNG width: 100% */
+  /* Dùng max-width để nó co lại trên màn hình lớn */
   max-width: 1000px;
-  margin: 0 auto;
+  
+  /* 2. ĐÂY LÀ CÁCH CĂN GIỮA ĐÚNG */
+  /* 20px (khoảng cách trên/dưới), auto (tự động căn trái/phải) */
+  margin: 20px auto; 
+  
   background: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -20,6 +19,7 @@ body {
 
 h1, h3 {
   color: #333;
+  text-align: center; /* Thêm cái này để căn giữa tiêu đề */
 }
 
 /* Nút bấm chung */
@@ -32,21 +32,15 @@ button {
   cursor: pointer;
   margin: 2px;
 }
-
-button:hover {
-  background-color: #0056b3;
-}
-
-button.btn-delete {
-  background-color: #dc3545;
-}
-button.btn-delete:hover {
-  background-color: #c82333;
-}
+button:hover { background-color: #0056b3; }
+button.btn-delete { background-color: #dc3545; }
+button.btn-delete:hover { background-color: #c82333; }
 
 /* Form nhập liệu */
 input[type="text"], input[type="email"] {
-  width: 95%;
+  /* Dùng box-sizing để padding không làm tràn */
+  box-sizing: border-box; 
+  width: 100%; /* Giờ có thể để 100% an toàn */
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -59,13 +53,19 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
 }
-
 th, td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+th { background-color: #f2f2f2; }
 
-th {
-  background-color: #f2f2f2;
+/* Căn giữa SearchForm (như cũ) */
+.search-form-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.search-form-container input {
+  width: 50%;
+  max-width: 400px;
 }
